@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>신선 수산물 쇼핑몰</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- 웹 접근성, 보안 메타태그 -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src *; child-src 'none';">
+</head>
+<body>
+  <header>
+    <h1>🐟 신선 수산몰</h1>
+    <nav>
+      <button id="toggleContrast">고대비/다크모드</button>
+    </nav>
+  </header>
+  <main>
+    <section id="products">
+      <!-- 1개 상품 예시, 필요하면 복사해서 여러개 만들면 됩니다 -->
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=80&q=80"
+             alt="광어 사진">
+        <div class="info">
+          <h2>광어 (산지직송)</h2>
+          <p>200g · 신선 · 오늘시세: <span class="price">23,000원</span></p>
+          <button onclick="window.open('https://forms.gle/구글폼주소','_blank')">구매의사 남기기</button>
+          <div class="meta">
+            <span>원산지: 경상남도</span>
+            <span>인증서: HACCP</span>
+          </div>
+          <div class="extra">
+            <span>추천 보관법: 0~5℃ 냉장</span>
+            <span>사용법: 회/구이 가능</span>
+          </div>
+        </div>
+      </div>
+      <!-- 추가 제품은 이 div를 복사! -->
+    </section>
+    <section id="notice">
+      <h3>💰 결제 안내</h3>
+      <p>주문 후 <b>은행계좌</b>에 입금(경남 100-1234-567890 예금주 신선수산)해주세요.<br>
+        <span style="color:#ff9b4a;">※ 입금 시 주문자 이름과 주문번호 꼭 입력! 미입금시 안내문자 발송</span>
+      </p>
+    </section>
+  </main>
+  <footer>
+    <small>© 2025 신선 수산 쇼핑몰 · All rights reserved.</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

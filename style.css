@@ -1,0 +1,131 @@
+body {
+  background: #eaf6f3;
+  font-family: 'Noto Sans KR', Arial, sans-serif;
+  color: #203a38;
+  font-size: 18px;
+  margin: 0;
+}
+header {
+  background: #fff;
+  padding: 1em 0 0.5em;
+  border-bottom: 1px solid #cfe7e1;
+  text-align: center;
+}
+h1 {
+  color: #269e93;
+  font-weight: bold;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+nav button {
+  background: #269e93;
+  color: #fff;
+  padding: 0.7em 1.2em;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  margin-top: 0.5em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+nav button:hover {
+  background: #ff9b4a;
+  color: #154542;
+}
+/* 제품 리스트 */
+#products {
+  max-width: 360px;
+  margin: 2em auto 1em auto;
+}
+.product-card {
+  display: flex;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px #269e9314;
+  margin-bottom: 1.4em;
+  padding: 1.2em;
+  align-items: center;
+  border: 1.5px solid #b7e3db;
+}
+.product-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 1em;
+}
+.product-card h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.6em 0;
+  color: #257e76;
+}
+.product-card .info p {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.7em;
+}
+.price {
+  font-weight: bold;
+  background: #dbf7f2;
+  padding: 2px 6px;
+  border-radius: 5px;
+  color: #257e76;
+}
+button {
+  background: #26b1ae;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  border: none;
+  margin-top: 0.7em;
+  cursor: pointer;
+}
+button:hover {
+  background: #ff9b4a;
+  color: #257e76;
+}
+.meta, .extra {
+  display: block;
+  font-size: 0.97em;
+  color: #406f66;
+  margin-top: 0.35em;
+}
+/* 결제 안내 */
+#notice {
+  background: #f4f8f5;
+  color: #234943;
+  max-width: 360px;
+  margin: 2em auto 1em;
+  border-radius: 10px;
+  padding: 1em 1em;
+  box-shadow: 0 1px 6px #269e9312;
+}
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background: #f8fbfa;
+  color: #7c9a94;
+  font-size: 0.95em;
+}
+/* 고대비/다크모드 지원 */
+body.dark-mode {
+  background: #202c2b;
+  color: #eaeaea;
+}
+body.dark-mode header { background: #253231; border-bottom: 1px solid #154542; }
+body.dark-mode h1 { color: #ff9b4a; }
+body.dark-mode .product-card { background: #253231; border: 1.5px solid #154542; }
+body.dark-mode button, body.dark-mode nav button {
+  background: #ff9b4a; color: #203a38;
+}
+body.dark-mode #notice { background: #2a3c3b; color: #fff; }
+body.dark-mode footer { background: #253231; color: #ff9b4a; }
+/* 반응형: 화면이 작아지면 자동 세로배치 */
+@media (max-width: 520px) {
+  #products { max-width: 97vw; }
+  .product-card { flex-direction: column; align-items: flex-start; }
+  .product-card img { margin-bottom: 0.5em; margin-right: 0; }
+  #notice { max-width: 98vw; }
+  main { padding: 0 4vw;}
+}
