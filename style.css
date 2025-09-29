@@ -26,13 +26,12 @@ nav button {
   border: none;
   margin-top: 0.5em;
   cursor: pointer;
-  transition: background 0.2s;
 }
 nav button:hover {
   background: #ff9b4a;
   color: #154542;
 }
-/* 제품 리스트 */
+/* 제품 카드 리스트 */
 #products {
   max-width: 360px;
   margin: 2em auto 1em auto;
@@ -59,8 +58,7 @@ nav button:hover {
   margin: 0 0 0.6em 0;
   color: #257e76;
 }
-.product-card .info p {
-  font-size: 1rem;
+.product-card p {
   margin-top: 0;
   margin-bottom: 0.7em;
 }
@@ -108,24 +106,11 @@ footer {
   color: #7c9a94;
   font-size: 0.95em;
 }
-/* 고대비/다크모드 지원 */
-body.dark-mode {
-  background: #202c2b;
-  color: #eaeaea;
-}
-body.dark-mode header { background: #253231; border-bottom: 1px solid #154542; }
-body.dark-mode h1 { color: #ff9b4a; }
-body.dark-mode .product-card { background: #253231; border: 1.5px solid #154542; }
-body.dark-mode button, body.dark-mode nav button {
-  background: #ff9b4a; color: #203a38;
-}
-body.dark-mode #notice { background: #2a3c3b; color: #fff; }
-body.dark-mode footer { background: #253231; color: #ff9b4a; }
-/* 반응형: 화면이 작아지면 자동 세로배치 */
+/* 반응형: 모바일에서는 자동 세로배치 */
 @media (max-width: 520px) {
-  #products { max-width: 97vw; }
+  #products { max-width: 99vw; }
   .product-card { flex-direction: column; align-items: flex-start; }
-  .product-card img { margin-bottom: 0.5em; margin-right: 0; }
-  #notice { max-width: 98vw; }
-  main { padding: 0 4vw;}
+  .product-card img { margin-bottom: 0.4em; margin-right: 0; width: 70vw; max-width: 180px; height: auto; }
+  #notice { max-width: 99vw; }
+  main { padding: 0 2vw;}
 }
